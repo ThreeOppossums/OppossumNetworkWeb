@@ -1,0 +1,55 @@
+.box-container {
+  list-style: none;
+}
+
+.box {
+  background: rgb(25, 25, 25);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px 40px 10px 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease 0.2s,
+    margin-top 0.5s ease 0.2s,
+    opacity 0.5s ease 0.2s;
+}
+
+.box:hover .content {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+.headline {
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(157, 0, 0);
+}
+
+.text_subhead {
+  color: gray;
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.text_information {
+  color: gray;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+a {
+  color: red;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+}

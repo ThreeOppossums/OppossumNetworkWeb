@@ -1,0 +1,10 @@
+services:
+  webserver:
+    image: httpd:latest
+    container_name: apache2
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ../websites/homepage:/usr/local/apache2/htdocs/
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
