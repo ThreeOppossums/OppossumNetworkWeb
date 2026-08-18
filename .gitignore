@@ -1,3 +1,6 @@
-.venv
-*.log
+.env
+GithubNotes.txt
+*.logs
 logs/
+**/logs/
+scrapped/

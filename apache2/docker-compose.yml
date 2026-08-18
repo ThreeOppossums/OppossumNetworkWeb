@@ -8,3 +8,4 @@ services:
     volumes:
       - ../websites/homepage:/usr/local/apache2/htdocs/
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./logs:/usr/local/apache2/logs/
