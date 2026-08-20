@@ -1,0 +1,5 @@
+base-url: "http://87.106.7.148:8080"
+listen-http: ":80"
+
+auth-file: "/var/cache/ntfy/user.db"
+auth-default-acces: "deny-all"

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  ntfy:
+    image: binwiederhier/ntfy
+    command:
+      - serve
+      #work in background
+    environment:
+      - TZ=Europe/Berlin
+      #TimeZone
+    ports:
+      - "8080:80"
+      #Server port 8080 to intern port 8080 (collision with apache)
+    volumes:
+      - ./config/server.yml:/etc/ntfy/server.yml
+      - ./cache:/var/cache/ntfy
+    restart: unless-stopped
+    #restarts when crashed but not when manually stopped

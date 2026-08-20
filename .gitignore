@@ -1,6 +1,5 @@
 .env
-GithubNotes.txt
 *.logs
 logs/
 **/logs/
-scrapped/
+ntfy/cache/

@@ -70,7 +70,7 @@ docker run --rm httpd:latest cat /usr/local/apache2/conf/httpd.conf > httpd.conf
 ## Documentations
 *commands and code in order of usage*
 
->10/08/2026 
+>18/08/2026 
 >Setup Webserver
 
 ```bash
@@ -100,7 +100,7 @@ docker-compose up -d
 #-d lets it run in the background so the terminal is free
 ```
 
->10/08/2026
+>18/08/2026
 >installing update system
 
 ```bash
@@ -119,7 +119,7 @@ unattended-upgrade --dry-run --debug
 #worked perfect
 ```
 
->10/08/2026
+>18/08/2026
 >updated folder in apache container to make logs visible
 
 
@@ -170,3 +170,40 @@ docker-compose restart
 #restarts service to apply changes
 ```
 ## update: acces to www.threeoppossums.com somehow not possible
+
+>19/08/2026
+>added ntfy
+
+created directories /ntfy and /ntfy/config
+created [/ntfy/config/server.yml](/ntfy/config/server.yml)
+created [/ntfy/docker-compose.yml](/ntfy/docker-compose.yml)
+
+```bash
+docker-compose up -d
+
+#created account, replaced the account name here, documented in notes on my pc
+docker exec -it ntfy ntfy user add USERNAME
+
+#didn't work: Error: No such container: ntfy
+
+#listed all dockers
+docker ps
+
+#returned that NAME=ntfy_ntfy_1
+
+#entered command again
+docker exec -it ntfy_ntfy_1 ntfy user add USERNAMEADMIN
+#-it allows terminal communication (-i, -t)
+
+#changed role to admin
+docker exec -it ntfy_ntfy_1 ntfy user change-role USERNAMEADMIN admin
+
+#denied access for every person
+docker exec ntfy_ntfy_1 ntfy access "*" "*" deny
+
+#created new user for the network(for the server)
+docker exec -it ntfy_ntfy_1 ntfy user add USERNAMESERVER
+
+#gave acces to the new serveruser
+docker exec ntfy_ntfy_1 ntfy access USERNAMESERVER "*" read-write
+```
