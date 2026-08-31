@@ -207,3 +207,16 @@ docker exec -it ntfy_ntfy_1 ntfy user add USERNAMESERVER
 #gave acces to the new serveruser
 docker exec ntfy_ntfy_1 ntfy access USERNAMESERVER "*" read-write
 ```
+
+>29/08/2026
+>updated to https
+
+updated [/apache2/httpd.conf](/apache2/httpd.conf) and [/apache2/docker-compose.yml](/apache2/docker-compose.yml)
+
+```bash
+docker-compose restart webserver
+
+docker-compose run --rm --entrypoint "" certbot certbot certonly --webroot -w /var/www/certbot -d threeoppossums.com -d www.threeoppossums.com --email ThreeOppossumsMail@censored.mail --agree-tos --no-eff-email
+
+docker-compose restart webserver
+```
