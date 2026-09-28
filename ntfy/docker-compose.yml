@@ -8,6 +8,7 @@ services:
       #work in background
     environment:
       - TZ=Europe/Berlin
+      - NTFY_CACHE_DURATION=2400h
       #TimeZone
     ports:
       - "8080:80"

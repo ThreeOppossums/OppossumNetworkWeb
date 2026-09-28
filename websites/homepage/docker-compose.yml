@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  homepage:
+    build: .
+    env_file:
+      - .env
+    container_name: homepage
+    restart: always
+    environment:
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+    networks:
+      - server-internal-communication
+
+networks:
+  server-internal-communication:
+    external: true

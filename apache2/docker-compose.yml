@@ -3,6 +3,8 @@ services:
     image: httpd:latest
     container_name: apache2
     restart: always
+    networks:
+      - server-internal-communication
     ports:
       - "80:80"
       - "443:443"
@@ -27,3 +29,7 @@ services:
 volumes:
   certbot-etc:
   certbot-www:
+
+networks:
+  server-internal-communication:
+    external: true

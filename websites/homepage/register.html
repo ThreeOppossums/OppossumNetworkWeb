@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link rel="stylesheet" href="CSS/page_setting.css" />
+    <link rel="stylesheet" href="CSS/navbar_style.css" />
+    <link rel="stylesheet" href="CSS/register_login.css" />
+
+    <script src="JS/register.js" defer></script>
+  </head>
+  <body>
+    <div class="login_register">
+      <p class="placeholder">.</p>
+      <ul class="list_login_register">
+        <li class="li_login_register">
+          <input
+            class="input_login_register"
+            type="text"
+            name="username"
+            placeholder="Username"
+            id="InputUsername" />
+        </li>
+        <li class="li_login_register">
+          <input
+            class="input_login_register"
+            type="password"
+            name="password"
+            placeholder="Password"
+            id="InputPassword" />
+        </li>
+        <li class="li_login_register">
+          <input
+            class="input_login_register"
+            type="password"
+            name="confirm_password"
+            placeholder="Confirm Password"
+            id="InputConfirmPassword" />
+        </li>
+        <li class="li_login_register button_container">
+          <a href="index.html"
+            ><button class="button_login_register" id="ButtonCancel">
+              Cancel
+            </button></a
+          >
+          <button id="ButtonSubmit" class="button_login_register">
+            Submit
+          </button>
+        </li>
+      </ul>
+      <p id="DisplayMessage" class="placeholder">.</p>
+    </div>
+  </body>
+</html>

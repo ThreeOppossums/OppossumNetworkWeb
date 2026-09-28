@@ -1,0 +1,32 @@
+.list_dev_message {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.li_dev_message {
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.li_dev_message:last-child {
+  margin-bottom: 0;
+}
+
+.overlay_frame_alert_headline {
+  font-family: "Arial";
+  color: aqua;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.dev_message_content {
+  list-style: none;
+  font-family: "Arial";
+  font-size: 2rem;
+}

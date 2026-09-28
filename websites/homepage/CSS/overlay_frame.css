@@ -1,0 +1,30 @@
+.overlay_frame {
+  border: 0.4rem solid rgb(25, 25, 25);
+  border-radius: 0.6rem;
+  background-color: rgb(35, 35, 35);
+  width: 90%;
+  max-width: 2000px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.overlay_frame_alert {
+  border: 0.4rem solid aqua;
+  border-radius: 0.6rem;
+  background-color: rgb(35, 35, 35);
+  width: 90%;
+  max-width: 2000px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}

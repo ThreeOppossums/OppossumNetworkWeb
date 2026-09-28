@@ -5,42 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oppossums Homepage</title>
 
-    <link rel="stylesheet" href="page_settings.css" />
-    <link rel="stylesheet" href="navbar_style.css" />
-    <link rel="stylesheet" href="background_video.css" />
+    <link rel="stylesheet" href="CSS/page_setting.css" />
+    <link rel="stylesheet" href="CSS/navbar_style.css" />
+    <link rel="stylesheet" href="CSS/background_video.css" />
+    <link rel="stylesheet" href="CSS/register_login.css" />
+    <link rel="stylesheet" href="CSS/overlay_frame.css" />
+    <link rel="stylesheet" href="CSS/overlay_message_alert.css" />
+
+    <script src="JS/overlay_manager.js" defer></script>
+    <script src="JS/register.js" defer></script>
+    <script src="JS/login.js" defer></script>
   </head>
   <body>
-
-  <video
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="/Imgs/Background_Placeholder.jpg"
-        id="background_video">
-        <source src="/Vids/Background.mp4" type="video/mp4" /></video>
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/Imgs/Background_Placeholder.jpg"
+      id="background_video">
+      <source src="/Vids/Background.mp4" type="video/mp4" />
+    </video>
 
     <nav class="navbar">
       <ul class="navbar_links">
         <li><a href="index.html">Home</a></li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown">Addons</a>
+          <a href="#" class="dropdown">Projects</a>
           <ul class="dropdown_content">
             <li><a href="addons.html">Addons</a></li>
-            <li><a href="addon_files.html">Files</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown">Experiments</a>
+          <a href="#" class="dropdown">Server</a>
           <ul class="dropdown_content">
             <li>
-              <p>Nothing yet :3</p>
+              <p>In the works :D</p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown">Login</a>
+          <ul class="dropdown_content">
+            <li>
+              <a href="#" id="button_open_login">Login</a>
+            </li>
+            <li>
+              <a href="#" id="button_open_register">Register</a>
             </li>
           </ul>
         </li>
       </ul>
     </nav>
+
+    <div id="login_overlay" class="overlay hidden">
+      <div class="overlay_frame">
+        <ul class="list_login_register">
+          <li class="li_login_register">
+            <input
+              class="input_login_register"
+              type="text"
+              name="username"
+              placeholder="Username"
+              id="InputUsernameLogin" />
+          </li>
+          <li class="li_login_register">
+            <input
+              class="input_login_register"
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="InputPasswordLogin" />
+          </li>
+          <li class="li_login_register button_container">
+            <button class="button_login_register" id="button_cancel_login">
+              Cancel
+            </button>
+            <button id="button_submit_login" class="button_login_register">
+              Submit
+            </button>
+          </li>
+        </ul>
+        <p id="" class="placeholder messageDisplay">.</p>
+      </div>
+    </div>
+
+    <div id="register_overlay" class="overlay hidden">
+      <div class="overlay_frame">
+        <ul class="list_login_register">
+          <li class="li_login_register">
+            <input
+              class="input_login_register"
+              type="text"
+              name="username"
+              placeholder="Username"
+              id="InputUsernameRegister" />
+          </li>
+          <li class="li_login_register">
+            <input
+              class="input_login_register"
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="InputPasswordRegister" />
+          </li>
+          <li class="li_login_register">
+            <input
+              class="input_login_register"
+              type="password"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              id="InputConfirmPasswordRegister" />
+          </li>
+          <li class="li_login_register button_container">
+            <button class="button_login_register" id="button_cancel_register">
+              Cancel
+            </button>
+            <button class="button_login_register" id="button_submit_register">
+              Submit
+            </button>
+          </li>
+        </ul>
+        <p id="" class="placeholder messageDisplay">.</p>
+      </div>
+    </div>
+
+    <div id="dev_message_overlay" class="overlay hidden">
+      <div class="overlay_frame_alert">
+        <ul class="list_dev_message">
+          <li class="li_dev_message">
+            <p class="overlay_frame_alert_headline">
+              This Website is in development. Some features might not work as
+              intended.
+            </p>
+          </li>
+          <li>
+            <ul class="dev_message_content">
+              <li>
+                <p>
+                  Although the login works on the homepage, it's currently
+                  useless. Features will be added later.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

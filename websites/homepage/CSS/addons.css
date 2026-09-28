@@ -1,5 +1,9 @@
-.box-container {
+.box_container {
+  margin-top: 150px;
+  padding: 0 20px;
   list-style: none;
+  transform: translateX(1%);
+  width: 98%;
 }
 
 .box {

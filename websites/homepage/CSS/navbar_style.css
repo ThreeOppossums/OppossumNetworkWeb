@@ -2,16 +2,20 @@
 
 .navbar {
   position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #333;
   padding: 1rem 2rem;
   color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-radius: 8px;
+  z-index: 2000;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .navbar_links {
